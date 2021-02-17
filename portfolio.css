@@ -12,7 +12,7 @@
     --color-white:white; */
     --color-dark-gold:#8E793E;
     --color-gold:#ecd381;
-    --color-black:rgb(27, 27, 27);
+    --color-black:black;
     --color-white:#eeeeee;
     --color-light-white:#FFFFFF;
     --color-blue:#2F4E76;
@@ -24,6 +24,7 @@ body{
 
 a{
     text-decoration: none;
+    color:var(--color-white);
 }
 
 a:visited{
@@ -101,6 +102,7 @@ a:visited{
 .home .introduction h1{
     font-size:var(--font-larggest);
     color:var(--color-white);
+    font-family:'Open Sans Condensed';
     font-weight:900;
     margin-bottom:1em;
     line-height:120%;
@@ -113,8 +115,9 @@ a:visited{
 
 .home img{
     width:19rem;
-    /* -webkit-filter: opacity(.5) drop-shadow(0 0 0 #374e80);
-    filter: opacidy(.5) drop-shadow(0 0 0 #374e80); */
+    filter:brightness(90%);
+    -webkit-filter: opacity(.8) drop-shadow(0 0 0 #6e8ed3);
+    filter: opacity(.8) drop-shadow(0 0 0 #6e8ed3);
 }
 
 /* skills */
@@ -233,7 +236,7 @@ a:visited{
 .edu_and_exp{
     background-color:var(--color-black);
     color:var(--color-white);
-    padding:4em 0;
+    padding:4em 1em;
 }
 
 .edu_and_exp h2{
@@ -246,7 +249,7 @@ a:visited{
 
 .edu_and_exp ul{
     border-top:1px solid var(--color-white);
-    width:27em;
+    width:100%;
     margin:0 auto;
     padding-top:1em;
 }
@@ -281,4 +284,62 @@ a:visited{
     font-size:var(--font-large);
     margin:0.5em;
     text-decoration: none;
+}
+
+
+@media screen and (min-width:768px){
+    /* navbar */
+    .navbar{
+        flex-direction:row;
+        justify-content:space-between;
+        z-index:2;
+    }
+    
+    .navbar .nav__items{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .navbar .nav__items .nav__item{
+        color:var(--color-gold);
+    }
+    
+    .navbar .menu, .navbar .logo{
+        display:none;
+    }
+    
+    /* home */
+    .home{
+        z-index: 0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        position:relative;
+    }
+
+    .home .introduction{
+        z-index:1;
+    }
+
+    .home .introduction h1{
+        font-size:5rem;
+    }
+
+    .home img{
+        position:absolute;
+        width:24rem;
+        z-index:0;
+    }
+
+    /* projects */
+    .projects .project{
+        flex-direction:row;
+        padding:0 20em;
+    }
+
+    /* experiences */
+    .edu_and_exp ul{
+        width:40em;
+    }
 }
