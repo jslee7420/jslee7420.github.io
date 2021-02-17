@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_reset.css">
+    <script src="https://kit.fontawesome.com/8c10e2519d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Jeongsoo's Portfolio</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <span class="logo">JS.DEV</span>
+        <a href="#"><i class="fas fa-bars menu"></i></a>
+        <ul class="nav__items">
+            <li class="nav__item"><a href="#home">Home</a></li>
+            <li class="nav__item"><a href="#skills">Skills</a></li>
+            <li class="nav__item"><a href="#edu_and_exp">Experiences</a></li>
+            <li class="nav__item"><a href="#projects">Projects</a></li>
+            <li class="nav__item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- 메인화면 -->
+    <section class="home" id="home">
+        <div class="introduction">
+            <h1>JEONGSOO LEE</br>FULLSTACK DEVELOPER</h1>
+        </div>
+        <img src="Astronaut-Space-PNG-Pic.png" alt="" width="100%">
+    </section>
+
+    <!-- 기술 스택 -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills__bar">
+            <div class="html_css">
+                HTML5 & CSS3
+            </div>
+            <div class="javascript">
+                Javascript(ES6)
+            </div>
+            <div class="python_django">
+                Python3 & Django
+            </div>
+            <div class="C">
+                C
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트  -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="BooKU.png" alt="" class="project__img">
+            <div class="description">
+                <span class="summary">건국대학교 전공책 교환 사이트</span>
+                <span class="title">BooKU</span>
+                <p class="content">BooKU는 비싼 전공책을 쉽게 교환하고 거래할 수 있도록 도와주는 사이트입니다. 기존의 중고거래 사이트와의 차별성을 위해 유저들이 학과에
+                    소속된사람들끼리만 교환/거래 할 수 있도록 선택가능하게 만들었습니다.</p>
+                <p class="tech_stack">
+                    <span class=title>기술스택: </span> HTML5, CSS, Bootstrap, Python, Django, AWS
+                </p>
+                <p class="contrib">
+                    <span class="title">개발내용: </span> 프론트엔드(전체), 백엔드(로그인, 로그아웃, 회원가입, 마이페이지, 회원정보 수정,공지사항), 배포
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 경력/경험 -->
+    <section class="edu_and_exp" id="edu_and_exp">
+        <h2>Experiences</h2>
+        <ul>
+            <li>2015.03 건국대학교 항공우주정보시스템공학과(현 기계항공공학부)</li>
+            <li>2019.10 비전공자를 위한 데이터사이언스 연합동아리 코알라UNIV 2기</li>
+            <li>2020.03 건국대학교 컴퓨터공학부 다전공</li>
+            <li>2020.06 건국대학교 IT 동아리 WIT 1기(개발셀)</li>
+            <li>2021.01 교내 전공책 교환 사이트 BooKU 풀스텍 개발</li>
+        </ul>
+    </section>
+
+    <!-- 연락처 -->
+    <footer class="contact" id="contact">
+        <h2>Contact</h2>
+        <span class="email">Email: jeongsoo.lee7420@gmail.com</span>
+        <a class="github" href="https://github.com/jslee7420?tab=repositories"><i class="fab fa-github"></i></a>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+
+</html>

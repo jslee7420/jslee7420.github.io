@@ -1,2 +1,15 @@
-# jslee7420.github.io
-Portfolio
+# Jeongsoo Lee's Portfolio page
+
+### Todo ✏️
+
+- [] animation implementation
+- [] skill bar redesign
+- [] projects redesign
+
+### In Progress 🚀
+
+- [] Resposive
+
+### Done ✓
+
+- [x] mobile static page
