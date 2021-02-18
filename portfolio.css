@@ -15,7 +15,14 @@
     --color-black:black;
     --color-white:#eeeeee;
     --color-light-white:#FFFFFF;
-    --color-blue:#2F4E76;
+    --color-blue:#3c74bd;
+    --color-dark-grey:#333333;
+    --color-light-grey:#dbdbdb;
+}
+
+@font-face {
+    src : url("LEMONMILK-Bold.otf");
+    font-family: "Lemonmilk";
 }
 
 body{
@@ -28,6 +35,10 @@ a{
 }
 
 a:visited{
+    color:var(--color-white);
+}
+
+a:before{
     color:var(--color-white);
 }
 
@@ -102,7 +113,8 @@ a:visited{
 .home .introduction h1{
     font-size:var(--font-larggest);
     color:var(--color-white);
-    font-family:'Open Sans Condensed';
+    font-family:'Lemonmilk';
+    
     font-weight:900;
     margin-bottom:1em;
     line-height:120%;
@@ -126,12 +138,12 @@ a:visited{
     display:flex;
     flex-direction:column;
     align-items:center;
-    background-color:var(--color-light-white);
+    background-color:white;
     padding:4em;
 }
 
 .skills h2{
-    font-size:var(--font-large);
+    font-size:var(--font-larggest);
     font-family: 'Permanent Marker';
     color:var(--color-black);
     /* border-bottom:3px solid var(--color-black); */
@@ -139,52 +151,64 @@ a:visited{
     text-align:center;
 }
 
-.skills .skills__bar{
+.skills .skills__container{
     width:25rem;
     margin-top:3rem;
-    border-left:1px solid var(--color-black);
-    border-right:1px solid var(--color-black);
 }
 
-.skills .skills__bar div{
-    font-size:var(--font-medium);
+.skills .skills__container .skill{
     margin:1em 0;
-    padding:0.5em 1em; 
-    border-right:1px solid var(--color-black);
-    border-bottom:1px solid var(--color-black);
-    border-top:1px solid var(--color-black);
-    background: linear-gradient(to right,var(--color-black),#5f5f5f);
-    color:var(--color-white);
-    border-radius:0 0.25em 0.25em 0;
 }
 
-.skills .skills__bar .html_css{
-    width:60%;
+.skills .skills__container .skill .skill__name{
+    font-size:var(--font-medium);
+    color:var(--color-black);
+    font-weight: 700;
+    margin-bottom:0.5em;
 }
 
-.skills .skills__bar .javascript{
-    width:40%;
+.skills .skills__container .skill__bar{
+    background-color: var(--color-light-grey);
+    height:0.25em;
 }
-.skills .skills__bar .python_django{
-    width:70%;
-}
-.skills .skills__bar .C{
+
+.html_css{
+    background-color: var(--color-blue);
     width:50%;
+    height:100%;
 }
 
+.javascript{
+    background-color: var(--color-blue);
+    width:40%;
+    height:100%;
+}
+
+.python_django{
+    background-color: var(--color-blue);
+    width:60%;
+    height:100%;
+}
+
+.C{
+    background-color: var(--color-blue);
+    width:40%;
+    height:100%;
+}
 
 /* projects */
 .projects{
-    background-color:var(--color-white);
+    background-color:var(--color-light-grey);
     padding: 4em 0;
     display:flex;
     flex-direction: column;
-    font-family: 맑은고딕, 'Malgun Gothic', dotum, gulim, sans-serif;
+    font-family: 'Gothic A1' sans-serif;
+    
 }
 
 .projects h2{
     text-align: center;
-    font-size:var(--font-large);
+    font-size:var(--font-larggest);
     font-family: 'Permanent Marker';
     color:var(--color-black);
     margin-bottom:1em;
@@ -207,10 +231,11 @@ a:visited{
 .projects .project .description{
     display:flex;
     flex-direction:column;
+    line-height:125%;
 }
 
 .projects .project .description .summary{
-    
+    line-height:125%;
 }
 
 .projects .project .description >.title{
@@ -223,7 +248,7 @@ a:visited{
 }   
 
 .projects .project .description .tech_stack, .projects .project .description .contrib{
-    margin: 0.5em 0;
+    margin-top: 0.5em;
 }
 
 .projects .project .description .tech_stack .title, .projects .project .description .contrib .title{
@@ -242,7 +267,7 @@ a:visited{
 .edu_and_exp h2{
     font-family: 'Permanent Marker';
     font-size:var(--font-large);
-    color:var(--color-white);
+    color:var(--color-gold);
     text-align:center;
     margin-bottom:1em;
 }
@@ -257,6 +282,7 @@ a:visited{
 .edu_and_exp ul li{
     font-size:var(--font-small);
     padding:0.5em 0;
+    font-family: 'Gothic A1';
 }
 
 
@@ -265,7 +291,7 @@ a:visited{
     /* border-top:1px solid var(--color-white); */
     background-color:var(--color-black);
     color:var(--color-white);
-    padding:2em 0;
+    padding:1em 0;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -316,6 +342,7 @@ a:visited{
         align-items: center;
         height:100vh;
         position:relative;
+        top:-50px;
     }
 
     .home .introduction{
@@ -323,8 +350,12 @@ a:visited{
     }
 
     .home .introduction h1{
-        font-size:5rem;
+        font-size:6rem;
+        position:relative;
+        top:120px;
+        line-height: 100%;
     }
+
 
     .home img{
         position:absolute;
@@ -332,10 +363,20 @@ a:visited{
         z-index:0;
     }
 
+    /* skills */
+    .skills .skills__container{
+        width:40em;
+    }
+
+
     /* projects */
     .projects .project{
         flex-direction:row;
         padding:0 20em;
+    }
+
+    .projects .project .project__img{
+        margin-right:5em;
     }
 
     /* experiences */

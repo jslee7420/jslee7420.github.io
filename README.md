@@ -3,7 +3,6 @@
 ### Todo ✏️
 
 - [] animation implementation
-- [] skill bar redesign
 - [] projects redesign
 
 ### In Progress 🚀
@@ -13,3 +12,4 @@
 ### Done ✓
 
 - [x] mobile static page
+- [x] skill bar redesign

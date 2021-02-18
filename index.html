@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css_reset.css">
     <script src="https://kit.fontawesome.com/8c10e2519d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&?family=Gothic+A1&Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
     <title>Jeongsoo's Portfolio</title>
 </head>
@@ -29,7 +29,7 @@
     <!-- 메인화면 -->
     <section class="home" id="home">
         <div class="introduction">
-            <h1>JEONGSOO LEE</br>JUNIOR DEVELOPER</h1>
+            <h1>JEONGSOO LEE</br><span>JUNIOR DEVELOPER</span></h1>
         </div>
         <img src="Astronaut-Space-PNG-Pic.png" alt="" width="100%">
     </section>
@@ -37,38 +37,22 @@
     <!-- 기술 스택 -->
     <section class="skills" id="skills">
         <h2>Skills</h2>
-        <div class="skills__bar">
-            <div class="html_css">
-                HTML5 & CSS3
+        <div class="skills__container">
+            <div class="skill">
+                <p class="skill__name">HTML5 & CSS3 - 50%</p>
+                <div class="skill__bar"><div class="html_css"></div></div>
             </div>
-            <div class="javascript">
-                Javascript(ES6)
+            <div class="skill">
+                <p class="skill__name">Javascript(ES6) - 40%</p>
+                <div class="skill__bar"><div class="javascript"></div></div>
             </div>
-            <div class="python_django">
-                Python3 & Django
+            <div class="skill">
+                <p class="skill__name">Python3 & Django - 60%</p>
+                <div class="skill__bar"><div class="python_django"></div></div>
             </div>
-            <div class="C">
-                C
-            </div>
-        </div>
-    </section>
-
-    <!-- 프로젝트  -->
-    <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <img src="BooKU.png" alt="" class="project__img">
-            <div class="description">
-                <span class="summary">건국대학교 전공책 교환 사이트</span>
-                <span class="title">BooKU</span>
-                <p class="content">BooKU는 비싼 전공책을 쉽게 교환하고 거래할 수 있도록 도와주는 사이트입니다. 기존의 중고거래 사이트와의 차별성을 위해 유저들이 학과에
-                    소속된사람들끼리만 교환/거래 할 수 있도록 선택가능하게 만들었습니다.</p>
-                <p class="tech_stack">
-                    <span class=title>기술스택: </span> HTML5, CSS, Bootstrap, Python, Django, AWS
-                </p>
-                <p class="contrib">
-                    <span class="title">개발내용: </span> 프론트엔드(전체), 백엔드(로그인, 로그아웃, 회원가입, 마이페이지, 회원정보 수정,공지사항), 배포
-                </p>
+            <div class="skill">
+                <p class="skill__name">C - 40%</p>
+                <div class="skill__bar"><div class="C"></div></div>
             </div>
         </div>
     </section>
@@ -84,6 +68,28 @@
             <li>2021.01 교내 전공책 교환 사이트 BooKU 풀스텍 개발</li>
         </ul>
     </section>
+
+    <!-- 프로젝트  -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="BooKU.png" alt="" class="project__img">
+            <div class="description">
+                <span class="summary">건국대학교 전공책 교환 사이트</span>
+                <span class="title">BooKU</span>
+                <p class="content">BooKU는 비싼 전공책을 쉽게 교환하고 거래할 수 있도록 도와주는 사이트입니다. 기존의 중고거래 사이트와의 차별성을 위해 유저들이 학과에
+                    소속된사람들끼리만 교환/거래 할 수 있도록 선택가능하게 만들었습니다.</p>
+                <p class="tech_stack">
+                    <span class=title>기술스택: <br></span> HTML5, CSS, Bootstrap, Python, Django, AWS
+                </p>
+                <p class="contrib">
+                    <span class="title">개발내용: <br></span> 프론트엔드(전체), 백엔드(로그인, 로그아웃,비밀번호 찾기, 회원가입, 마이페이지, 회원정보 수정,공지사항), 배포
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
 
     <!-- 연락처 -->
     <footer class="contact" id="contact">
