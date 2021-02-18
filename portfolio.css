@@ -114,7 +114,6 @@ a:before{
     font-size:var(--font-larggest);
     color:var(--color-white);
     font-family:'Lemonmilk';
-    
     font-weight:900;
     margin-bottom:1em;
     line-height:120%;
@@ -125,11 +124,52 @@ a:before{
     color:var(--color-white);
 }
 
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+ 
 .home img{
+    opacity:0;
     width:19rem;
     filter:brightness(90%);
     -webkit-filter: opacity(.8) drop-shadow(0 0 0 #6e8ed3);
     filter: opacity(.8) drop-shadow(0 0 0 #6e8ed3);
+
+    animation: fadein 3s ease-out forwards;
+    -moz-animation: fadein 3s ease-out forwards; /* Firefox */
+    -webkit-animation: fadein 3s ease-out forwards; /* Safari and Chrome */
+    -o-animation: fadein 3s ease-out forwards; /* Opera */
+
 }
 
 /* skills */

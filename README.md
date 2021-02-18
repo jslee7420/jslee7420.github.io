@@ -7,9 +7,10 @@
 
 ### In Progress 🚀
 
-- [] Resposive
+
 
 ### Done ✓
 
 - [x] mobile static page
 - [x] skill bar redesign
+- [X] Resposive
