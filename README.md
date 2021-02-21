@@ -2,15 +2,13 @@
 
 ### Todo ✏️
 
-- [] animation implementation
 - [] projects redesign
 
 ### In Progress 🚀
-
-
 
 ### Done ✓
 
 - [x] mobile static page
 - [x] skill bar redesign
-- [X] Resposive
+- [x] Resposive
+- [x] animation implementation
