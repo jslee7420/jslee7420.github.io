@@ -3,8 +3,9 @@
     --font-larggest:2.5rem;
     --font-large:2rem;
     --font-medium-large:1.5rem;
+    --font-medium-large-sm:1.2rem;
     --font-medium:1rem;
-    --font-small:0.8rem;
+    --font-small:0.9rem;
     --font-smaller:0.75em;
     /* color */
     /* --color-green-dark:#27353F;
@@ -23,6 +24,19 @@
 @font-face {
     src : url("LEMONMILK-Bold.otf");
     font-family: "Lemonmilk";
+}
+
+@font-face{
+    src: url("NanumSquareR.ttf"),
+    url("NanumSquareL.ttf"),
+    url("NanumSquareL.ttf"),
+    url("NanumSquareEB.ttf"),
+    url("NanumSquareB.ttf"),
+    url("NanumSquare_acR.ttf"),
+    url("NanumSquare_acL.ttf"),
+    url("NanumSquare_acEB.ttf"),
+    url("NanumSquare_acB.ttf");
+    font-family:"NanumSquareR";
 }
 
 body{
@@ -132,6 +146,7 @@ a:before{
     width:100%;
     text-align:center;
     padding:0.75em 0;
+    font-weight: bold;
 }
 
 .navbar .nav__items .nav__item a:hover{
@@ -224,7 +239,7 @@ a:before{
     flex-direction:column;
     align-items:center;
     background-color:white;
-    padding:4em;
+    padding:4em 1em;
 }
 
 .skills h2{
@@ -237,7 +252,7 @@ a:before{
 }
 
 .skills .skills__container{
-    width:25rem;
+    width:100%;
     margin-top:3rem;
 }
 
@@ -284,14 +299,43 @@ a:before{
     transition:all 2.5s ease-out .75s;
 }
 
+
+
+/* Education & Experience */
+.edu_and_exp{
+    background-color:var(--color-black);
+    color:var(--color-white);
+    padding:4em 1em;
+}
+
+.edu_and_exp h2{
+    font-family: 'Permanent Marker';
+    font-size:var(--font-large);
+    color:var(--color-gold);
+    text-align:center;
+    margin-bottom:1em;
+}
+
+.edu_and_exp ul{
+    border-top:1px solid var(--color-white);
+    width:100%;
+    margin:0 auto;
+    padding-top:1em;
+}
+
+.edu_and_exp ul li{
+    font-size:var(--font-small);
+    padding:0.5em 0;
+    font-family: 'NanumSquareR';
+}
+
+
 /* projects */
 .projects{
-    background-color:var(--color-light-grey);
+    background-color:white;
     padding: 4em 0;
-    display:flex;
-    flex-direction: column;
-    font-family: 'Gothic A1' sans-serif;
-    
+    font-family: 'NanumSquareR';
+    font-size: var(--font-small);
 }
 
 .projects h2{
@@ -302,18 +346,32 @@ a:before{
     margin-bottom:1em;
 }
 
+.summary{
+    font-weight:bold;
+    font-size:var(--font-medium-large-sm);
+    margin-bottom:8px;
+}
+
 .projects .project{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding:2em 2em; 
+    padding:2em 2em;
+    padding-bottom:0;
 }
 
 .projects .project .project__img{
     width:20em;
     border-radius:50%;
     margin:1em;
+    box-sizing:border-box;
+    padding:2em;
+}
+
+.projects .project .project__img:hover{
+    border:1px solid var(--color-black);
+    cursor:pointer;
 }
 
 .projects .project .description{
@@ -343,35 +401,6 @@ a:before{
     font-weight:bold;
 }
 
-
-
-/* Education & Experience */
-.edu_and_exp{
-    background-color:var(--color-black);
-    color:var(--color-white);
-    padding:4em 1em;
-}
-
-.edu_and_exp h2{
-    font-family: 'Permanent Marker';
-    font-size:var(--font-large);
-    color:var(--color-gold);
-    text-align:center;
-    margin-bottom:1em;
-}
-
-.edu_and_exp ul{
-    border-top:1px solid var(--color-white);
-    width:100%;
-    margin:0 auto;
-    padding-top:1em;
-}
-
-.edu_and_exp ul li{
-    font-size:var(--font-small);
-    padding:0.5em 0;
-    font-family: 'Gothic A1';
-}
 
 
 /* contact */
@@ -460,7 +489,8 @@ a:before{
     /* projects */
     .projects .project{
         flex-direction:row;
-        padding:0 20em;
+        max-width:60rem;
+        margin: 0 auto;
     }
 
     .projects .project .project__img{
